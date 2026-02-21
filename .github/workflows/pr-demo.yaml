@@ -1,0 +1,12 @@
+name: PR Demo Workflow
+on:
+  pull request:
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        run:
+          echo "Checking out code..."
+          # Add your checkout steps here 
