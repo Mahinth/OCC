@@ -1,0 +1,12 @@
+name: PR Actions
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: echo "Hello! A pull request was made!"
