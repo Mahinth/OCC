@@ -14,6 +14,16 @@ pipeline {
             }
         }
         
+        stage('Install Python') {
+            steps {
+                echo 'Installing Python...'
+                sh '''
+                    sudo apt-get update
+                    sudo apt-get install -y python3 python3-pip
+                '''
+            }
+        }
+        
         stage('Setup Python Environment') {
             steps {
                 echo 'Setting up Python environment...'
